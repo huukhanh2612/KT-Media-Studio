@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liên Hệ | KT Media Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <!-- Header -->
+  <header class="bg-black text-white py-6">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">KT Media Studio</h1>
+      <nav>
+        <a href="index.html" class="mx-3 hover:text-pink-400">Trang chủ</a>
+        <a href="contact.html" class="mx-3 text-pink-400 font-semibold">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contact Form -->
+  <section class="py-20">
+    <div class="max-w-xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Liên Hệ Với Chúng Tôi</h2>
+      <p class="mb-8 text-gray-600">Chúng tôi sẽ phản hồi quý khách trong thời gian sớm nhất.</p>
+      <form action="https://formspree.io/f/myzpwlkw" method="POST" class="bg-white p-6 rounded-lg shadow text-left space-y-4">
+        
+        <div>
+          <label class="block mb-1 font-semibold">Họ và tên</label>
+          <input type="text" name="name" required class="w-full border border-gray-300 rounded p-2">
+        </div>
+
+        <div>
+          <label class="block mb-1 font-semibold">Email</label>
+          <input type="email" name="email" required class="w-full border border-gray-300 rounded p-2">
+        </div>
+
+        <div>
+          <label class="block mb-1 font-semibold">Dịch vụ cần sử dụng</label>
+          <select name="service" required class="w-full border border-gray-300 rounded p-2">
+            <option value="" disabled selected>Chọn dịch vụ</option>
+            <option value="Thiết kế & Chỉnh sửa ảnh">Thiết kế & Chỉnh sửa ảnh</option>
+            <option value="Quay phim & Chụp ảnh">Quay phim & Chụp ảnh</option>
+            <option value="Thiết kế Website">Thiết kế Website</option>
+            <option value="Khác">Dịch vụ khác</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block mb-1 font-semibold">Nội dung liên hệ</label>
+          <textarea name="message" rows="5" required class="w-full border border-gray-300 rounded p-2"></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-pink-500 text-white font-bold py-2 rounded hover:bg-pink-600 transition">
+          Gửi liên hệ
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-6 text-center">
+    <p>&copy; 2025 KT Media Studio. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
