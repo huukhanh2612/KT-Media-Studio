@@ -5,44 +5,89 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KT Media Studio</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Segoe UI"', 'sans-serif']
+          },
+          colors: {
+            primary: '#ec4899'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
+<body class="bg-gray-100 text-gray-800 font-sans relative">
+
+  <!-- Nút gọi và cuộn lên đầu -->
+  <a href="tel:0912345678" class="fixed bottom-6 right-6 bg-primary text-white px-4 py-2 rounded-full shadow-lg hover:bg-pink-600 transition z-50">
+    📞 Gọi ngay
+  </a>
+  <a href="#top" class="fixed bottom-20 right-6 bg-gray-800 text-white px-3 py-2 rounded-full shadow-lg hover:bg-gray-700 transition z-50">
+    ⬆️ Lên đầu
+  </a>
 
   <!-- Header -->
-  <header class="bg-black text-white py-6">
+  <header id="top" class="bg-black text-white py-6 shadow-md">
     <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-      <h1 class="text-3xl font-bold">KT Media Studio</h1>
-      <nav class="mt-4 md:mt-0">
-        <a href="index.html" class="mx-3 hover:text-pink-400">Trang chủ</a>
-        <a href="contact.html" class="mx-3 hover:text-pink-400">Liên hệ</a>
+      <h1 class="text-3xl font-extrabold tracking-tight text-primary">KT Media Studio</h1>
+      <nav class="mt-4 md:mt-0 space-x-4">
+        <a href="index.html" class="hover:text-primary transition">Trang chủ</a>
+        <a href="contact.html" class="hover:text-primary transition">Liên hệ</a>
       </nav>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="bg-white py-16">
-    <div class="max-w-6xl mx-auto px-4 text-center">
-      <h2 class="text-4xl md:text-5xl font-bold mb-6">Chuyên Thiết Kế, Chỉnh Sửa Ảnh, Quay Chụp & Viết Web</h2>
-      <p class="text-lg text-gray-600 mb-8">Mang lại sản phẩm sáng tạo, độc đáo và đúng nhu cầu của bạn</p>
-      <a href="contact.html" class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-lg transition">Liên hệ ngay</a>
+  <section class="bg-white py-20 text-center">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-5xl font-extrabold leading-tight mb-6 text-gray-900">Chuyên Thiết Kế, Chỉnh Sửa Ảnh, Quay Chụp & Viết Web</h2>
+      <p class="text-xl text-gray-600 mb-8">Mang lại sản phẩm sáng tạo, độc đáo và đúng nhu cầu của bạn</p>
+      <a href="contact.html" class="bg-primary hover:bg-pink-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition">Liên hệ ngay</a>
+    </div>
+  </section>
+
+  <!-- Lời giới thiệu -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 fade-in" id="intro-text">
+        KT Media Studio được thành lập với khát vọng tạo nên một không gian sáng tạo, chuyên nghiệp và đầy cảm hứng trong lĩnh vực truyền thông hình ảnh. Chúng tôi cung cấp các dịch vụ thiết kế đồ họa, chỉnh sửa ảnh, quay phim, chụp hình cá nhân, ảnh cưới và thiết kế website. Mỗi sản phẩm chúng tôi tạo ra đều mang dấu ấn riêng biệt, tập trung vào cảm xúc và câu chuyện của từng khách hàng. Với đội ngũ trẻ trung, nhiệt huyết, chúng tôi luôn đồng hành cùng khách hàng để biến ý tưởng thành hiện thực, tạo nên những giá trị lâu dài và ý nghĩa trong từng dự án.
+      </p>
     </div>
   </section>
 
   <!-- Services -->
-  <section id="services" class="py-20 bg-gray-50">
+  <section id="services" class="py-24 bg-gray-50">
     <div class="max-w-6xl mx-auto px-4">
-      <h3 class="text-3xl font-bold text-center mb-12">Dịch Vụ Của Chúng Tôi</h3>
+      <h3 class="text-4xl font-bold text-center mb-16 text-gray-900">Dịch Vụ Của Chúng Tôi</h3>
       <div class="grid md:grid-cols-3 gap-10">
-        <a href="photography.html" class="bg-white rounded-xl shadow p-6 hover:shadow-lg transition block">
-          <h4 class="text-xl font-semibold mb-2">🎨 Thiết kế & Chỉnh sửa ảnh</h4>
+        <a href="photography.html" class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition block">
+          <h4 class="text-2xl font-semibold mb-2 text-primary">🎨 Thiết kế & Chỉnh sửa ảnh</h4>
           <p class="text-gray-600">Retouch ảnh chân dung, ảnh cưới, banner, poster, chỉnh màu chuyên nghiệp.</p>
         </a>
-        <a href="photo-editing.html" class="bg-white rounded-xl shadow p-6 hover:shadow-lg transition block">
-          <h4 class="text-xl font-semibold mb-2">📸 Quay phim & Chụp ảnh</h4>
+        <a href="photo-editing.html" class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition block">
+          <h4 class="text-2xl font-semibold mb-2 text-primary">📸 Quay phim & Chụp ảnh</h4>
           <p class="text-gray-600">Chụp ảnh studio, ngoại cảnh, quay video quảng cáo, MV cá nhân, lễ cưới...</p>
         </a>
-        <a href="web-design.html" class="bg-white rounded-xl shadow p-6 hover:shadow-lg transition block">
-          <h4 class="text-xl font-semibold mb-2">💻 Viết website theo yêu cầu</h4>
+        <a href="web-design.html" class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition block">
+          <h4 class="text-2xl font-semibold mb-2 text-primary">💻 Viết website theo yêu cầu</h4>
           <p class="text-gray-600">Thiết kế web giới thiệu, landing page, web bán hàng, blog cá nhân giá rẻ.</p>
         </a>
       </div>
@@ -50,21 +95,31 @@
   </section>
 
   <!-- Portfolio -->
-  <section id="portfolio" class="py-20 bg-white">
+  <section id="portfolio" class="py-24 bg-white">
     <div class="max-w-6xl mx-auto px-4">
-      <h3 class="text-3xl font-bold text-center mb-12">Dự Án Nổi Bật</h3>
+      <h3 class="text-4xl font-bold text-center mb-16 text-gray-900">Dự Án Nổi Bật</h3>
       <div class="grid md:grid-cols-3 gap-6">
-        <img src="https://raw.githubusercontent.com/huukhanh2612/kanthy/main/1a.PNG" alt="Dự án 1" class="rounded-lg shadow">
-        <img src="https://raw.githubusercontent.com/huukhanh2612/kanthy/main/3a.PNG" alt="Dự án 2" class="rounded-lg shadow">
-        <img src="https://raw.githubusercontent.com/huukhanh2612/kanthy/main/4a.PNG" alt="Dự án 3" class="rounded-lg shadow">
+        <img src="https://raw.githubusercontent.com/huukhanh2612/kanthy/main/1a.PNG" alt="Dự án 1" class="rounded-xl shadow-lg">
+        <img src="https://raw.githubusercontent.com/huukhanh2612/kanthy/main/1.jpg" alt="Dự án 2" class="rounded-xl shadow-lg">
+        <img src="https://raw.githubusercontent.com/huukhanh2612/kanthy/main/3.jpg" alt="Dự án 3" class="rounded-xl shadow-lg">
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-black text-white py-6 text-center">
+  <footer class="bg-black text-white py-6 text-center text-sm">
     <p>&copy; 2025 KT Media Studio. All rights reserved.</p>
   </footer>
+
+  <script>
+    window.addEventListener('scroll', function () {
+      const intro = document.getElementById('intro-text');
+      const rect = intro.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        intro.classList.add('visible');
+      }
+    });
+  </script>
 
 </body>
 </html>
