@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ảnh & Video Cá Nhân | KT Media Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Segoe UI"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body class="bg-zinc-900 text-white">
+
+  <!-- Header -->
+  <header class="bg-zinc-950 py-6 shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold tracking-wide text-pink-400">KT Media Studio</h1>
+      <nav>
+        <a href="index.html" class="mx-3 hover:text-pink-400">Trang chủ</a>
+        <a href="contact.html" class="mx-3 hover:text-pink-400">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="h-[90vh] bg-cover bg-center relative" style="background-image: url('https://raw.githubusercontent.com/huukhanh2612/anhcuoi/main/studio-wedding-thanh-t%C3%A2m.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center text-center">
+      <div class="px-4">
+        <h2 class="text-5xl font-bold mb-4 text-white fade-in">Cá Tính Qua Ống Kính</h2>
+        <p class="text-lg text-gray-300 fade-in">Ghi lại hình ảnh và câu chuyện cá nhân một cách nghệ thuật và đậm chất riêng.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Ảnh Cá Nhân -->
+  <section class="py-20 px-4">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
+      <img src="https://raw.githubusercontent.com/huukhanh2612/kanthy/main/1.jpg" class="rounded-xl shadow-lg" alt="Ảnh cá nhân 1">
+      <img src="https://raw.githubusercontent.com/huukhanh2612/kanthy/main/3.jpg" class="rounded-xl shadow-lg" alt="Ảnh cá nhân 2">
+      <img src="https://raw.githubusercontent.com/huukhanh2612/kanthy/main/4.jpg" class="rounded-xl shadow-lg" alt="Ảnh cá nhân 3">
+      <img src="https://raw.githubusercontent.com/huukhanh2612/kanthy/main/5.jpg" class="rounded-xl shadow-lg" alt="Ảnh cá nhân 4">
+      <img src="https://raw.githubusercontent.com/huukhanh2612/kanthy/main/6.jpg" class="rounded-xl shadow-lg" alt="Ảnh cá nhân 5">
+    </div>
+  </section>
+
+  <!-- Section 2: Video Cá Nhân -->
+  <section class="py-20 bg-zinc-800 px-4">
+    <div class="max-w-4xl mx-auto text-center mb-10">
+      <h3 class="text-3xl font-semibold text-pink-400 mb-4">🎬 Video Cá Nhân & Tự Giới Thiệu</h3>
+      <p class="text-gray-300">Truyền tải cá tính và thông điệp riêng qua những video được dàn dựng sáng tạo, cảm xúc.</p>
+    </div>
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+      <video controls class="rounded-lg shadow w-full">
+        <source src="https://raw.githubusercontent.com/huukhanh2612/kanthy/73b2ea69e04c447703fb5301b62c78746fd1bf94/2.MOV" type="video/mp4">
+        Trình duyệt của bạn không hỗ trợ định dạng video này.
+      </video>
+      <video controls class="rounded-lg shadow w-full">
+        <source src="https://raw.githubusercontent.com/huukhanh2612/kanthy/73b2ea69e04c447703fb5301b62c78746fd1bf94/7.MOV" type="video/mp4">
+        Trình duyệt của bạn không hỗ trợ định dạng video này.
+      </video>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-pink-600 text-white text-center py-16">
+    <h4 class="text-3xl font-bold mb-4">Sẵn sàng kể câu chuyện của bạn?</h4>
+    <a href="contact.html" class="inline-block bg-white text-pink-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition">Liên hệ ngay</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-gray-400 py-6 text-center text-sm">
+    <p>&copy; 2025 KT Media Studio. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
